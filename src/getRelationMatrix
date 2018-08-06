@@ -1,23 +1,23 @@
 import java.util.ArrayList;
 import java.util.List;
 
-final public static int notDefine = 0;
-final public static int greater = 1;
-final public static int less = -1;
+final public static int NOTDEFINE = 0;
+final public static int GREATER = 1;
+final public static int LESS = -1;
 	
 @SuppressWarnings("null")
 static List <List <Integer> > getRelationMatrix(List < List <Integer> > marks) {
 		
 		int n = marks.size();
 		int m = marks.get(0).size();
-		List < List < Integer > > relationMatrix = null;
+		List < List < Integer > > relationMatrix = new ArrayList< List < Integer > >();
 		
 		// Initialize with notDefine for all.
     
 		for(int i=0; i < n; i++) {
-			List <Integer> tmp = null;
-			for(int j=0;j<m; j++)
-				tmp.add(notDefine);
+			List <Integer> tmp = new ArrayList < > ();
+			for(int j = 0;j < m; j++)
+				tmp.add(NOTDEFINE);
 			relationMatrix.add(tmp);
 			}
 		
